@@ -186,5 +186,5 @@ def menu():
         else:
             print("❌ Opción inválida.\n")
 
-# Ejecutar programa
+
 menu()
