@@ -1,17 +1,17 @@
 {
-    "promedio_general": 6.9,
-    "aprobados": 4,
+    "promedio_general": 7.42,
+    "aprobados": 5,
     "mejor_nota": {
         "alumnos": [
-            "Lucía"
+            "Lola Perez"
         ],
-        "nota": 8.5
+        "nota": 10.0
     },
     "promedio_por_materia": {
         "Programación": 8.0,
         "Matemática": 6.0,
         "Física": 8.5,
         "Química": 5.0,
-        "Matematica": 7.0
+        "Lengua": 8.5
     }
 }
