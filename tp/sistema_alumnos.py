@@ -44,7 +44,7 @@ def cargar_manual():
 
     
     try:
-        with open("notas.csv", "a", newline='', encoding='utf-8') as archivo:
+        with open("/Users/estudio/Documents/GitHub/tp-integrador-/tp/notas.csv", "a", newline='', encoding='utf-8') as archivo:
             escritor = csv.writer(archivo)
             escritor.writerow(nuevo)
         print("📄 Registro también guardado en 'notas.csv'\n")
