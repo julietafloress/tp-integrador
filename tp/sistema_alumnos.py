@@ -1,26 +1,24 @@
 import csv
 import json
 
-# Estructura principal
 datos = []
 
-# 1. Cargar datos desde un CSV
 def cargar_csv(ruta_archivo):
     with open(ruta_archivo, newline='', encoding='utf-8') as archivo:
         lector = csv.reader(archivo)
-        next(lector)  # Salta encabezado
+        next(lector)  
         for fila in lector:
             datos.append([
-                fila[0],  # Nombre
-                fila[1],  # Materia
-                float(fila[2]),  # Nota1
-                float(fila[3]),  # Nota2
-                float(fila[4]),  # Nota3
-                float(fila[5])   # NotaFinal
+                fila[0],  
+                fila[1],  
+                float(fila[2]),  
+                float(fila[3]),  
+                float(fila[4]),  
+                float(fila[5])   
             ])
     print("✔️ Datos cargados desde CSV.\n")
 
-# 2. Cargar datos manualmente
+
 def cargar_manual():
     print("📥 Ingresá un nuevo registro:")
     nombre = input("Nombre y Apellido: ")
@@ -39,7 +37,7 @@ def cargar_manual():
     datos.append(nuevo)
     print("✔️ Registro agregado.\n")
 
-    # Guardar en CSV
+    
     try:
         with open("notas.csv", "a", newline='', encoding='utf-8') as archivo:
             escritor = csv.writer(archivo)
@@ -49,7 +47,7 @@ def cargar_manual():
         print(f"⚠️ No se pudo guardar en CSV: {e}")
 
 
-# 3. Informes
+
 def informes():
     print("\n📊 INFORMES ESTADÍSTICOS")
     if not datos:
@@ -81,7 +79,7 @@ def informes():
         print(f"    {materia}: {prom:.2f}")
     print()
 
-    # Guardar resultados en JSON
+    
     resultados = {
         "promedio_general": round(promedio_final, 2),
         "aprobados": aprobados,
@@ -118,9 +116,9 @@ def mostrar_resultados_guardados():
     except Exception as e:
         print(f"⚠️ Error al leer el archivo JSON: {e}")
 
-# 4. Métodos de ordenamiento
 
-# Burbuja por NotaFinal
+
+
 def ordenar_por_nota_final():
     n = len(datos)
     for i in range(n):
@@ -129,7 +127,7 @@ def ordenar_por_nota_final():
                 datos[j], datos[j+1] = datos[j+1], datos[j]
     print("🔃 Lista ordenada por Nota Final (burbuja).\n")
 
-# Selección por Nombre
+
 def ordenar_por_nombre():
     n = len(datos)
     for i in range(n):
@@ -140,7 +138,7 @@ def ordenar_por_nombre():
         datos[i], datos[min_idx] = datos[min_idx], datos[i]
     print("🔃 Lista ordenada por Nombre (selección).\n")
 
-# 5. Mostrar los datos
+
 def mostrar_datos():
     print("\n📋 LISTADO ACTUAL")
     print(f"{'Nombre y Apellido':<20} {'Materia':<15} {'N1':<6} {'N2':<6} {'N3':<6} {'Final':<6}")
@@ -149,7 +147,7 @@ def mostrar_datos():
         print(f"{d[0]:<20} {d[1]:<15} {d[2]:<6} {d[3]:<6} {d[4]:<6} {d[5]:<6}")
     print()
 
-# Menú
+
 def menu():
     while True:
         print("📌 MENÚ DE OPCIONES")
@@ -186,5 +184,4 @@ def menu():
         else:
             print("❌ Opción inválida.\n")
 
-# Ejecutar programa
 menu()
