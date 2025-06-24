@@ -4,19 +4,24 @@ import json
 datos = []
 
 def cargar_csv(ruta_archivo):
-    with open(ruta_archivo, newline='', encoding='utf-8') as archivo:
-        lector = csv.reader(archivo)
-        next(lector)  
-        for fila in lector:
-            datos.append([
-                fila[0],  
-                fila[1],  
-                float(fila[2]),  
-                float(fila[3]),  
-                float(fila[4]),  
-                float(fila[5])   
-            ])
-    print("✔️ Datos cargados desde CSV.\n")
+    try:
+        with open(ruta_archivo, newline='', encoding='utf-8') as archivo:
+            lector = csv.reader(archivo)
+            next(lector)  
+            for fila in lector:
+                datos.append([
+                    fila[0],  
+                    fila[1],  
+                    float(fila[2]),  
+                    float(fila[3]),  
+                    float(fila[4]),  
+                    float(fila[5])   
+                ])
+        print("✔️ Datos cargados desde CSV.\n")
+    except FileNotFoundError:
+        print(f"❌ No se encontró el archivo: {ruta_archivo}\n")
+    except Exception as e:
+        print(f"⚠️ Error al cargar CSV: {e}\n")
 
 
 def cargar_manual():
