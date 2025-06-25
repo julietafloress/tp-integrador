@@ -172,10 +172,8 @@ def menu():
             informes()
         elif opcion == '4':
             ordenar_por_nota_final()
-            mostrar_datos()
         elif opcion == '5':
             ordenar_por_nombre()
-            mostrar_datos()
         elif opcion == '6':
             mostrar_datos()
         elif opcion == '7':
