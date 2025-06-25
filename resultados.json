@@ -1,17 +1,17 @@
 {
-    "promedio_general": 7.42,
-    "aprobados": 5,
+    "promedio_general": 6.95,
+    "aprobados": 40,
     "mejor_nota": {
         "alumnos": [
-            "Lola Perez"
+            "Laura Martinez"
         ],
         "nota": 10.0
     },
     "promedio_por_materia": {
-        "Programación": 8.0,
-        "Matemática": 6.0,
-        "Física": 8.5,
-        "Química": 5.0,
-        "Lengua": 8.5
+        "Matemática": 7.18,
+        "Historia": 6.55,
+        "Programación": 6.96,
+        "Biología": 7.31,
+        "Inglés": 6.71
     }
 }
