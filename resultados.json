@@ -8,10 +8,10 @@
         "nota": 10.0
     },
     "promedio_por_materia": {
-        "Matemática": 7.18,
         "Historia": 6.55,
+        "Inglés": 6.71,
         "Programación": 6.96,
-        "Biología": 7.31,
-        "Inglés": 6.71
+        "Matemática": 7.18,
+        "Biología": 7.31
     }
 }
