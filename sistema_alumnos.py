@@ -6,7 +6,7 @@ datos = []
 def cargar_csv(ruta_archivo):
     with open(ruta_archivo, newline='', encoding='utf-8') as archivo:
         lector = csv.reader(archivo)
-        next(lector)  # Salta encabezado
+        next(lector)  
         for fila in lector:
             datos.append([
                 fila[0],  
